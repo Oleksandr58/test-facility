@@ -9,15 +9,51 @@ var				gulp    	= require('gulp'),
 				imagemin    = require('gulp-imagemin'),
 				pngquant    = require('imagemin-pngquant'),
 				autoprefixer= require('gulp-autoprefixer'),
+				svgSprite = require('gulp-svg-sprite');
+				cheerio = require('gulp-cheerio'),
+				replace = require('gulp-replace'),
 				nunjucks 			= require('gulp-nunjucks');
 				
+
+			
+var config = {
+	shape: {
+		dimension: {         // Set maximum dimensions
+			maxWidth: 500,
+			maxHeight: 500
+		},
+		spacing: {         // Add padding
+			padding: 0
+		}
+	},
+	mode: {
+		symbol: {
+			dest : '.'
+		}
+	}
+};
+				
+gulp.task('svg-sprite', function (cb) {
+	return gulp.src('app/img/svg/*.svg')
+		.pipe(svgSprite(config))	
+		.pipe(cheerio({
+			run: function($, file) {
+				$('[fill]:not([fill="currentColor"])').removeAttr('fill');
+				$('[stroke]').removeAttr('stroke');
+			},
+			parserOptions: { xmlMode: true }
+		}))
+		.pipe(replace('&gt;', '>'))
+		.pipe(rename({ basename: 'sprite' }))
+		.pipe(gulp.dest('app/img'))
+});		
 
 gulp.task('nunjucks', function () {
 	return gulp.src('app/templates/index.html')
 		.pipe(nunjucks.compile())
 		.pipe(gulp.dest('app'))
 		.pipe(browserSync.reload({ stream: true }))
-});
+});			
 
 gulp.task('scss', function() {
 	return gulp.src('app/scss/main.scss')

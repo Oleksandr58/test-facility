@@ -1,12 +1,21 @@
 // Variables
+$font-face: "GothamPro";
+
+$font-face-size: 12px;
+$font-little-size: 8px;
+
+$lh-main: 16px;
+
+$animation-time: .3s;
+
+$color-main: #000000;
+$color-special: #af9146;
+$color-light: #9b9b9b;
+$color-border: #e2e2e2;
+$color-text-hover: #ffffff;
+$color-bg-hover: #000000;
+
+$border-main: 1px $color-border solid;
 
 
-// %redline {
-//     &::after {
-//         content: '';
-//         display: block;
-//         width: 60px;
-//         border-bottom: $icon-color solid 3px;
-//         margin: 35px auto;
-//     }
-// }
+//@extend %redline;
