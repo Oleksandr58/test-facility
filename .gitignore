@@ -1,0 +1,10 @@
+// gitignore
+
+node_modules/
+.bowerrc
+package-lock.json
+app/img/svg/svg_icons/
+.DS_Store
+app/.DS_Store
+app/img/.DS_Store
+app/img/raster/.DS_Store

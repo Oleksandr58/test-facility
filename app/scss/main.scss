@@ -1,0 +1,14 @@
+// Base import
+
+@import "normalize";
+
+// Arguments
+
+@import "variables";
+@import "mixins";
+
+// Styles import
+
+@import "layout/header";
+@import "layout/slider";
+@import "layout/products";
