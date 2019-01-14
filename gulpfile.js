@@ -121,6 +121,9 @@ gulp.task('build', ['clean', 'nunjucks', 'scss', 'img', 'js', 'vendors'], functi
 		])
 	.pipe(gulp.dest('dist/css'));
 
+	var buildImg = gulp.src('app/img/*.jpg')
+	.pipe(gulp.dest('dist/img'));
+
 	var buildJSON = gulp.src('app/json/*.json')
 	.pipe(gulp.dest('dist/json'));
 	
