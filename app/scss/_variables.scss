@@ -2,7 +2,9 @@
 $font-face: "GothamPro";
 
 $font-face-size: 12px;
+$font-product-size: 14px;
 $font-little-size: 8px;
+$font-big-size: 22px;
 
 $lh-main: 16px;
 
@@ -14,11 +16,15 @@ $color-light: #9b9b9b;
 $color-border: #e2e2e2;
 $color-arrow: #ffffff;
 $color-text-hover: #ffffff;
+$color-text-proceed-btn: #ffffff;
 $color-bg-header: #ffffff;
+$color-bg-modal: #ffffff;
 $color-bg-hover: #000000;
 $color-bg-arrow: #000000;
+$color-bg-proceed-btn: #000000;
 
 $border-main: 1px $color-border solid;
+$border-bold: 2px $color-border solid;
 
 
 //@extend %redline;

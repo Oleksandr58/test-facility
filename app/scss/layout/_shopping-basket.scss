@@ -1,0 +1,125 @@
+.basket {
+    background: $color-bg-modal;
+    padding: 82px 54px 24px 24px;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 285px;
+    transform: translateX(100%);
+    transition: transform $animation-time;
+
+    &.active {
+        transform: none;
+    }
+
+    &__close {
+        width: 12px;
+        height: 12px;
+        fill: $color-light;
+        position: absolute;
+        top: 82px;
+        right: 54px;
+        cursor: pointer;
+    }
+
+    &__title {
+        font-size: $font-product-size;
+        font-weight: bold;
+        margin-bottom: 44px;
+    }
+
+    &__products {
+        border-top: $border-main;
+        border-bottom: $border-main;
+        padding: 55px 0;
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    &__product {
+        display: flex;
+    }
+
+    &__total {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: $font-product-size;
+        font-weight: bold;
+        margin: 20px 0 40px;
+    }
+
+    &__price {
+        color: $color-special;
+    }
+
+    &__btn {
+        text-transform: uppercase;
+        width: 100%;
+        padding: 21px 0 18px;
+        background: $color-bg-proceed-btn;
+        color: $color-text-proceed-btn;
+        cursor: pointer;
+    }
+}
+
+.b-product {
+    margin-bottom: 45px;
+    
+    &__img {
+        height: 110px;
+        margin-right: 28px;
+    }
+
+    &__title {
+        font-size: $font-product-size;
+        font-weight: bold;
+        line-height: 1.5;
+        margin-bottom: 6px;
+    }
+
+    &__detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__amount {
+        display: flex;
+        border: $border-bold;
+        padding: 0px 5px;
+    }
+
+    &__minus,
+    &__plus {
+        padding: 7px;
+        color: $color-light;
+        cursor: pointer;
+    }
+
+    &__amount-products {
+        display: flex;
+        align-items: center;
+        padding: 0 7px 0 10px;
+        line-height: $lh-main;
+        color: $color-main;
+    }
+
+    &__price {
+        font-size: $font-product-size;
+        font-weight: bold;
+        color: $color-special;
+    }
+
+    &__size {
+        line-height: $lh-main;
+    }
+}

@@ -1,0 +1,36 @@
+{
+	"products": [
+		{
+            "name": "Pastel summer dress",
+            "id": "#535728",
+            "img": "img/535728.jpg",
+            "price": "1200",
+            "currency": "UAH",
+            "sizes": ["xs", "s", "m"]
+		},
+		{
+            "name": "leather shoes",
+            "id": "#535729",
+            "img": "img/535729.jpg",
+            "price": "1200",
+            "currency": "UAH",
+            "sizes": ["xs", "s", "m"]
+		},
+		{
+            "name": "grey trench",
+            "id": "#535730",
+            "img": "img/535730.jpg",
+            "price": "1200",
+            "currency": "UAH",
+            "sizes": ["xs", "s", "m"]
+		},
+		{
+            "name": "Minimal accessorie",
+            "id": "#535731",
+            "img": "img/535731.jpg",
+            "price": "540",
+            "currency": "UAH",
+            "sizes": ["xs", "s", "m"]
+		}
+	]
+} 

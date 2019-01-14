@@ -1,0 +1,42 @@
+<section class="products">
+    <h2 class="products__title">new arrivals</h2>
+
+    <ul class="products__list">
+    </ul>
+</section>
+
+
+<template id="js-product">
+    <li class="products__product product">
+            <img src="img/535728.jpg" alt="">
+
+            <div class="product__title">
+                Pastel summer dress
+            </div>
+
+            <div class="product__price">
+                1200 UAH
+            </div>
+
+            <div class="product__footer">
+                <ul class="product__sizes sizes">
+                    <li class="sizes__title">Size:</li>
+                    <li class="sizes__size js-size-product">xs</li>
+                    <li class="sizes__size js-size-product">s</li>
+                    <li class="sizes__size js-size-product">m</li>
+                </ul>
+
+                <div class="product__id">#535728</div>
+            </div>
+
+            <div class="product__btns">
+                <button class="product__add js-add-product">add to cart</button>
+
+                <button class="product__like js-like-product">
+                    <svg>
+                        <use xlink:href="./img/svg/sprite.svg#heart"></use>
+                    </svg>
+                </button>
+            </div>
+        </li>
+</template>

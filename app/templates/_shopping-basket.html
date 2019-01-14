@@ -1,0 +1,47 @@
+<div class="basket js-basket">
+    <svg class="basket__close js-open-basket">
+        <use xlink:href="./img/svg/sprite.svg#close"></use>
+    </svg>
+
+    <div class="basket__title">
+        Моя корзина   (
+        <span class="js-product-amount">0</span>
+        )
+    </div>
+
+    <ul class="basket__products js-basket-products">
+    </ul>
+
+    <div class="basket__total">
+        <div>Total</div>
+        <div class="basket__price"><span class="js-total-price">0</span>UAH</div>
+    </div>
+
+    <button type="submit" class="basket__btn js-send-order">proceed checkout</button>
+</div>
+
+<template id="js-product-basket">
+    <li class="basket__product b-product">
+            <img class="b-product__img" src="img/535728.jpg" alt="">
+
+            <div class="b-product__detail">
+                <div class="b-product__title">Pastel summer dress</div>
+                <div class="b-product__size">
+                    Size:
+                    <span class="js-b-product__size"></span>
+                </div>
+
+                <div class="b-product__footer">
+                    <div class="b-product__amount">
+                        <div class="b-product__minus js-product-minus">-</div>
+
+                        <div class="b-product__amount-products js-product-amount">1</div>
+
+                        <div class="b-product__plus js-product-plus">+</div>
+                    </div>
+
+                    <div class="b-product__price">1200 UAH</div>
+                </div>
+            </div>
+        </li>
+</template>

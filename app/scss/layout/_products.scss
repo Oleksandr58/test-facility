@@ -1,0 +1,121 @@
+.products {
+    padding: 80px 54px 82px;
+
+    &__title {
+        text-align: center;
+        font-size: $font-big-size;
+        text-transform: uppercase;
+        font-weight: normal;
+        letter-spacing: 10px;
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.product {
+    max-width: 272px;
+
+    &__title {
+        font-size: $font-product-size;
+        margin: 35px 0 8px;
+        font-weight: bold;
+    }
+
+    &__price {
+        color: $color-special;
+        font-weight: bold;
+    }
+
+    &__footer {
+        margin: 19px 0 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__sizes {
+        display: flex;
+        align-items: center;
+        line-height: $lh-main;
+    }
+
+    &__id {
+        color: $color-light;
+        line-height: $lh-main;
+        margin-right: 2px;
+    }
+
+    &__btns {
+        display: flex;
+        border: $border-main;
+    }
+
+    &__add {
+        border: $border-main;
+        width: 100%;
+        padding: 19px 0 16px;
+        transition: $animation-time;
+
+        &.active {
+            color: $color-text-hover;
+            background: $color-bg-hover;
+            border: $color-bg-hover 1px solid;
+        }
+    }
+
+    &__like {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: $border-main;
+        width: 50px;
+        height: 50px;
+        transition: $animation-time;
+
+        svg {
+            stroke:$color-special;
+            fill: $color-special;
+            width: 16px;
+            height: 16px;
+        }
+
+        &.active {
+            background: $color-bg-hover;
+            border: $color-bg-hover 1px solid;
+
+            svg {
+                fill: $color-text-hover;
+                stroke: $color-text-hover;
+            }
+        }
+    }
+}
+
+.sizes {
+    &__title {
+        margin-right: 32px;
+    }
+
+    &__size {
+        text-transform: uppercase;
+        margin-right: 16px;
+        cursor: pointer;
+        border-radius: 50%;
+        line-height: 26px;
+        vertical-align: middle;
+        text-align: center;
+        height: 26px;
+        width: 26px;
+        transition: $animation-time;
+
+        &.active {
+            background: $color-bg-hover;
+            color: $color-text-hover;
+        }
+    }
+}

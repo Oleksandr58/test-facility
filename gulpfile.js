@@ -120,6 +120,9 @@ gulp.task('build', ['clean', 'nunjucks', 'scss', 'img', 'js', 'vendors'], functi
 		'app/css/main.min.css',
 		])
 	.pipe(gulp.dest('dist/css'));
+
+	var buildJSON = gulp.src('app/json/*.json')
+	.pipe(gulp.dest('dist/json'));
 	
 	var buildJS = gulp.src([ 
 		'app/js/vendors.min.js', 
