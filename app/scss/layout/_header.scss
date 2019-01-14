@@ -1,9 +1,15 @@
 .header {
     margin: 0 auto;
-    max-width: 1280px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: $color-bg-header;
+    z-index: 1;
 
     &__wrap {
-        margin: 17px 74px 26px 54px;
+        margin: 0 auto;
+        padding: 17px 74px 26px 54px;
+        max-width: 1280px;
     }
 
     &__top {

@@ -1,0 +1,35 @@
+.slider {
+    height: 540px;
+    position: relative;
+    overflow: hidden;
+    
+    &__img {
+        width: 100%;
+    }
+
+    &__arrow {
+        fill: $color-arrow;
+        background: $color-bg-arrow;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        left: 10px;
+        cursor: pointer;
+
+        &--right {
+            left: calc(100% - 10px);
+            transform: translate(-100%, -50%);
+        }
+
+        svg {
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
