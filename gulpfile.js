@@ -120,7 +120,10 @@ gulp.task('build', ['clean', 'nunjucks', 'scss', 'img', 'js'], function() {
 	var buildJSON = gulp.src('app/json/*.json')
 	.pipe(gulp.dest('dist/json'));
 	
-	var buildJS = gulp.src('app/js/scripts.min.js' )
+	var buildJS = gulp.src([
+		'app/js/scripts.min.js',
+		'app/js/vendors.min.js'
+	])
 	.pipe(gulp.dest('dist/js'));
 	
 	var buildSvgSprite = gulp.src('app/img/svg/sprite.svg')
