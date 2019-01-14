@@ -67,6 +67,13 @@ gulp.task('scss', function() {
 	.pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('vendors', function() {
+	return gulp.src('app/js/vendors/*.js')
+					.pipe(concat('vendors.min.js')) 
+					.pipe(uglify()) 
+					.pipe(gulp.dest('app/js'));
+});
+
 gulp.task('js', function() {
 	return gulp.src('app/js/layout/*.js')
 					.pipe(concat('scripts.min.js')) 
@@ -105,7 +112,7 @@ gulp.task('watch', ['browser-sync', 'nunjucks', 'scss', 'js'], function() {
 	gulp.watch('app/js/layout/*.js', ['js']);
 });
 
-gulp.task('build', ['clean', 'nunjucks', 'scss', 'img', 'js'], function() {
+gulp.task('build', ['clean', 'nunjucks', 'scss', 'img', 'js', 'vendors'], function() {
 	var buildIndex = gulp.src('app/index.html')
 	.pipe(gulp.dest('dist'));
 	
@@ -120,10 +127,10 @@ gulp.task('build', ['clean', 'nunjucks', 'scss', 'img', 'js'], function() {
 	var buildJSON = gulp.src('app/json/*.json')
 	.pipe(gulp.dest('dist/json'));
 	
-	var buildJS = gulp.src([
-		'app/js/scripts.min.js',
-		'app/js/vendors.min.js'
-	])
+	var buildJS = gulp.src([ 
+		'app/js/vendors.min.js', 
+		'app/js/scripts.min.js' 
+		])
 	.pipe(gulp.dest('dist/js'));
 	
 	var buildSvgSprite = gulp.src('app/img/svg/sprite.svg')
